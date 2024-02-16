@@ -41,14 +41,18 @@ function handleKeyboardKeyUpEvent(e) {
   if (playerPressed === exoectedAlphabet) {
    // console.log(exoectedAlphabet);
     console.log("you  got a point");
-
+    const currentScore=currenttElementScore('current-score')
+    console.log(currentScore)
+    const newScore=currentScore + 1;
+    currentElementScore('current-score',newScore)
+    console.log(newScore)
 /* get acurrent score */
-const currentElement=document.getElementById('current-score');
-const currentScoreText=currentElement.innerText;
-const currentScore=parseInt(currentScoreText)
-/* increase the score by 1 */
-const newScore=currentScore + 1;
-currentElement.innerText=newScore;
+// const currentElement=document.getElementById('current-score');
+// const currentScoreText=currentElement.innerText;
+// const currentScore=parseInt(currentScoreText)
+// /* increase the score by 1 */
+// const newScore=currentScore + 1;
+// currentElement.innerText=newScore;
 
 
 
@@ -60,12 +64,19 @@ currentElement.innerText=newScore;
 
   } else  {
     console.log("dhur u miya ply");
-    /* current-life */
-const currentLifeElement=document.getElementById("current-life");
-const currentText=currentLifeElement.innerText;
-const currentScoreLife=parseInt(currentText)
-const newLife=currentScoreLife - 1;
-currentLifeElement.innerText=newLife
+
+  const currentLife=  currenttElementScore('current-life')
+  const newLife=currentLife - 1;
+  currentElementScore('current-life',newLife)
+
+
+
+    /* current-life =========================*/
+// const currentLifeElement=document.getElementById("current-life");
+// const currentText=currentLifeElement.innerText;
+// const currentScoreLife=parseInt(currentText)
+// const newLife=currentScoreLife - 1;
+// currentLifeElement.innerText=newLife
 
 
 

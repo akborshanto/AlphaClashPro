@@ -40,3 +40,22 @@ function removeBackgroundColor(elementId) {
     const element=document.getElementById(elementId).classList.remove('bg-orange-600')
     return element;
 }
+
+
+/* currentscore */
+
+function currenttElementScore(element){
+const elements=document.getElementById(element)
+
+const currentScoreText=elements.innerText;
+const value=parseInt(currentScoreText)
+return value;
+
+}
+function  currentElementScore(element,value){
+
+const elements=document.getElementById(element).innerText=value;
+
+
+
+}
