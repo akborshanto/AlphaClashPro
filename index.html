@@ -127,12 +127,13 @@
         </div>
       </section>
       <!-- score-section -->
-      <section class="score flex flex-col  justify-items-center items-center hidden">
+      <section  id="final-round" class="score text-center  bg-blue-600 text-white  mx-auto  w-[200px] h-[200px] flex flex-col  justify-items-center items-center hidden">
         <div class="score-item ">
-          <h1 id="current-score">1</h1>
-          <button class="btn btn-primary">Play Now</button>
+          <h1 id="last-score" class="text-2xl mb-4">1</h1>
+          <!-- <span id="final-score">END :</span> -->
+          <button class="btn btn-primary bt-4" onclick="play()">Play Now</button>
 
-          <p>Practice will make you Pro</p>
+          <p class="mt-4">Practice will make you Pro</p>
         </div>
       </section>
     </main>

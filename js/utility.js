@@ -40,7 +40,15 @@ function removeBackgroundColor(elementId) {
     const element=document.getElementById(elementId).classList.remove('bg-orange-600')
     return element;
 }
+/* gettext */
+function getTextElementById(element){
 
+  const elements=document.getElementById(element)
+  const text=elements.innerText;
+  return text
+  
+  
+  }
 
 /* currentscore */
 
@@ -59,3 +67,15 @@ const elements=document.getElementById(element).innerText=value;
 
 
 }
+function gameOver(){
+
+
+
+  hideElementById('play-ground')
+  showElementById('final-round')
+/* endscroe */
+const endScore=currenttElementScore('current-score')
+currentElementScore('last-score',endScore)
+console.log(endScore)
+}
+

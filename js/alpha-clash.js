@@ -31,6 +31,12 @@
 
 function handleKeyboardKeyUpEvent(e) {
   const playerPressed = e.key;
+  console.log("key key key",playerPressed)
+if( playerPressed === "Escape"){
+
+
+  gameOver()
+}
   /* expected-keys */
 
   const exoectedAlphabet = document
@@ -70,7 +76,10 @@ function handleKeyboardKeyUpEvent(e) {
   currentElementScore('current-life',newLife)
 
 
-
+if( newLife === 0){
+  gameOver()
+  // alert("game Ober")
+}
     /* current-life =========================*/
 // const currentLifeElement=document.getElementById("current-life");
 // const currentText=currentLifeElement.innerText;
@@ -99,5 +108,13 @@ function continueGame() {
 function play() {
   hideElementById("home-screen");
   showElementById("play-ground");
+  hideElementById("final-round")
+  /* ==== */
+  currentElementScore("current-life",5)
+  currentElementScore("current-score",0)
   continueGame();
+const currentAlphabet= getTextElementById('current-alphabet')
+removeBackgroundColor(currentAlphabet)
+
+
 }
